@@ -5,7 +5,7 @@ Extra options for original code for currency info
 import requests
 import json
 from flask import Flask
-import datetime //new library
+import datetime # new library
 
 
 def get_valutes_list():
@@ -20,9 +20,9 @@ app = Flask(__name__)
 
 
 def create_html(valutes):
-    actualdate = datetime.date.today().strftime("%d.%m.%Y") // new variable with current date in format 00.00.0000
+    actualdate = datetime.date.today().strftime("%d.%m.%Y") # new variable with current date in format 00.00.0000
     text = '<h1>Курс валют</h1>'
-    text += f'<h3>Данные актульны на {actualdate}</h3>' // text with information about the relevance of data for the current date
+    text += f'<h3>Данные актульны на {actualdate}</h3>' # text with information about the relevance of data for the current date
     text += '<table>'
     text += '<tr>'
     for _ in valutes[0]:
